@@ -378,6 +378,12 @@ func (t *Table) SetSelectable(rows, columns bool) *Table {
 	return t
 }
 
+// max
+// GetVisibleRows returns the visible rows in a table
+func (t *Table) GetVisibleRows() (vRows, fRows int) {
+	return t.visibleRows, t.fixedRows
+}
+
 // GetSelectable returns what can be selected in a table. Refer to
 // SetSelectable() for details.
 func (t *Table) GetSelectable() (rows, columns bool) {
